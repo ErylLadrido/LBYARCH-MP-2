@@ -2,17 +2,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function prototype for assembly
 extern void imgCvtGrayInttoFloat(int* intImage, float* floatImage, int height, int width);
 
 int main() {
     int height, width;
 
-    // Read image dimensions (height and width)
+    // Read image height and width
     printf("Enter the height and width of the image: ");
     scanf("%d %d", &height, &width);
 
-    // Allocate memory for the integer image (input)
+    // Allocate memory for input
     int* intImage = (int*)malloc(height * width * sizeof(int));
 
     // Read pixel values for the integer image
@@ -21,13 +20,13 @@ int main() {
         scanf("%d", &intImage[i]);
     }
 
-    // Allocate memory for the float image (output)
+    // Allocate memory for output
     float* floatImage = (float*)malloc(height * width * sizeof(float));
 
-    // Call the assembly function to convert the image
+    // Conversion
     imgCvtGrayInttoFloat(intImage, floatImage, height, width);
 
-    // Print the converted float image
+    // Print converted values
     printf("Converted float image:\n");
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
