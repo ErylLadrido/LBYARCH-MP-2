@@ -22,7 +22,7 @@ How to run the Program (in cmd)
 - ConvertImageC.exe < text.txt
 
 Performance Analysis
-Runimes were measured for different image sizes (height × width):
+Runtimes were measured for different image sizes (height × width):
 - 10 × 10
 - 100 × 100
 - 1000 × 1000
